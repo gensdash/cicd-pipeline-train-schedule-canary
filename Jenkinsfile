@@ -5,7 +5,6 @@ pipeline {
         DOCKER_IMAGE_NAME = "genser/train-schedule"
     }
     stages {
-        /**
         stage('Build') {
             steps {
                 echo 'Running build automation'
@@ -13,7 +12,6 @@ pipeline {
                 archiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
         }
-        */
         stage('Build Docker Image') {
             when {
                 branch 'master'
